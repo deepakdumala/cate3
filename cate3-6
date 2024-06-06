@@ -1,0 +1,19 @@
+def is_composite(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return True
+    return False
+
+def count_composite_numbers(arr):
+    count = 0
+    for num in arr:
+        if is_composite(num):
+            count += 1
+    return count
+
+# Example usage
+arr = [4, 7, 9, 10, 13, 15, 16, 18, 21]
+num_composites = count_composite_numbers(arr)
+print("Number of composite numbers in the array:", num_composites)
