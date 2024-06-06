@@ -1,0 +1,19 @@
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def find_non_composite_numbers(arr):
+    non_composite_numbers = []
+    for num in arr:
+        if is_prime(num):
+            non_composite_numbers.append(num)
+    return non_composite_numbers
+
+# Example usage
+arr = [4, 7, 9, 10, 13, 15, 16, 18, 21]
+non_composite_numbers = find_non_composite_numbers(arr)
+print("Non-composite numbers in the array:", non_composite_numbers)
