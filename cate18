@@ -1,0 +1,17 @@
+def display_MSB_LSB(number):
+    # Convert the number to binary
+    binary_representation = bin(number)[2:]  # Remove the '0b' prefix
+    
+    # Extract the MSB (leftmost bit)
+    MSB = binary_representation[0]
+    
+    # Extract the LSB (rightmost bit)
+    LSB = binary_representation[-1]
+    
+    return MSB, LSB
+
+# Example usage
+number = int(input("Enter a number: "))
+MSB, LSB = display_MSB_LSB(number)
+print("MSB:", MSB)
+print("LSB:", LSB)
