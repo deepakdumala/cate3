@@ -1,0 +1,15 @@
+def find_frequency(arr):
+    frequency = {}
+    for num in arr:
+        if num in frequency:
+            frequency[num] += 1
+        else:
+            frequency[num] = 1
+    return frequency
+
+# Example usage
+arr = [1, 2, 3, 2, 1, 5, 2, 4, 1, 3, 3]
+frequency_dict = find_frequency(arr)
+print("Frequency of each element:")
+for num, freq in frequency_dict.items():
+    print(f"Number: {num}, Frequency: {freq}")
