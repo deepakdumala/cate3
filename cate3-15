@@ -1,0 +1,10 @@
+def insert_element_at_index(lst, index, element):
+    lst.insert(index, element)
+    return lst
+
+# Example usage
+original_list = [1, 2, 3, 4, 5]
+index = int(input("Enter the index to insert the element: "))
+element = int(input("Enter the element to insert: "))
+modified_list = insert_element_at_index(original_list, index, element)
+print("List after inserting element at index:", modified_list)
