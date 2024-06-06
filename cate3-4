@@ -1,0 +1,12 @@
+def nth_largest_number(nums, N):
+    sorted_nums = sorted(nums, reverse=True)
+    if 1 <= N <= len(sorted_nums):
+        return sorted_nums[N - 1]
+    else:
+        return "Invalid value of N. N should be between 1 and the length of the list."
+
+# Example usage
+nums = [10, 5, 8, 20, 3, 11, 15]
+N = int(input("Enter the value of N: "))
+nth_largest = nth_largest_number(nums, N)
+print("The", N, "largest number in the list is:", nth_largest)
