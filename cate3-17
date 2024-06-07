@@ -1,0 +1,18 @@
+def smaller_numbers_than_current(nums):
+    # Initialize a result list
+    result = [0] * len(nums)
+    
+    # Iterate through each number in the array
+    for i in range(len(nums)):
+        count = 0
+        for j in range(len(nums)):
+            if nums[j] < nums[i]:
+                count += 1
+        result[i] = count
+    
+    return result
+
+# Example usage
+nums = [8, 1, 2, 2, 3]
+result = smaller_numbers_than_current(nums)
+print(f'The number of smaller elements for each element in the array is: {result}')
