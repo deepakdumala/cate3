@@ -1,0 +1,19 @@
+import datetime
+
+def get_day_of_week(day, month, year):
+    # Create a datetime object for the given date
+    date_obj = datetime.datetime(year, month, day)
+    
+    # Get the day of the week (0 = Monday, 1 = Tuesday, ..., 6 = Sunday)
+    day_of_week = date_obj.weekday()
+    
+    # Return the day of the week as a string
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    return days[day_of_week]
+
+# Example usage
+day = 7
+month = 6
+year = 2024
+day_of_week = get_day_of_week(day, month, year)
+print(f"The corresponding day of the week for {day}/{month}/{year} is: {day_of_week}")
