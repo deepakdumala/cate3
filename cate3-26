@@ -1,0 +1,27 @@
+def find_mth_maximum(arr, M):
+    sorted_arr = sorted(arr, reverse=True)
+    return sorted_arr[M-1]
+
+def find_nth_minimum(arr, N):
+    sorted_arr = sorted(arr)
+    return sorted_arr[N-1]
+
+def calculate_operations(arr, M, N):
+    mth_max = find_mth_maximum(arr, M)
+    nth_min = find_nth_minimum(arr, N)
+    
+    sum_result = mth_max + nth_min
+    difference_result = mth_max - nth_min
+    product_result = mth_max * nth_min
+    
+    return sum_result, difference_result, product_result
+
+# Example usage
+array = [7, 2, 5, 3, 9, 12, 1, 8, 6, 10, 4, 11]
+M = 3  # 3rd maximum
+N = 2  # 2nd minimum
+
+sum_result, difference_result, product_result = calculate_operations(array, M, N)
+print(f'The sum of the {M}rd maximum and {N}nd minimum is: {sum_result}')
+print(f'The difference of the {M}rd maximum and {N}nd minimum is: {difference_result}')
+print(f'The product of the {M}rd maximum and {N}nd minimum is: {product_result}')
