@@ -1,0 +1,19 @@
+import itertools
+
+def combinations_from_dict(dictionary):
+    keys = dictionary.keys()
+    key_combinations = itertools.product(*[dictionary[key] for key in keys])
+    combinations = [''.join(combination) for combination in key_combinations]
+    return combinations
+
+# Example usage
+my_dict = {
+    'key1': 'abc',
+    'key2': 'def',
+    'key3': 'ghi'
+}
+
+combinations = combinations_from_dict(my_dict)
+print("All combinations:")
+for combination in combinations:
+    print(combination)
