@@ -1,0 +1,9 @@
+# Define the range of numbers
+start = 1
+end = 10
+
+# Create the list of tuples
+number_square_tuples = [(num, num ** 2) for num in range(start, end + 1)]
+
+# Print the list of tuples
+print(number_square_tuples)
